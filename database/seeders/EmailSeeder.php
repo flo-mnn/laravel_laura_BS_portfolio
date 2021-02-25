@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class EmailSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class EmailSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('emails')->insert([
+            'email'=>"contact@example.com"
+        ]);
     }
 }

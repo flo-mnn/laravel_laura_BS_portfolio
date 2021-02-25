@@ -15,6 +15,11 @@ class CreateResumeSummariesTable extends Migration
     {
         Schema::create('resume_summaries', function (Blueprint $table) {
             $table->id();
+            $table->string('name',100);
+            $table->string('text',1500);
+            $table->string('address',200)->nullable();
+            $table->string('phone',40)->nullable();
+            $table->string('email',100)->nullable();
             $table->timestamps();
         });
     }

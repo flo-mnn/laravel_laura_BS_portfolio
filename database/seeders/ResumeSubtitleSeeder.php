@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ResumeSubtitleSeeder extends Seeder
 {
@@ -13,6 +14,16 @@ class ResumeSubtitleSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('resume_subtitles')->insert([
+            [
+                'title'=>'Summary'
+            ],
+            [
+                'title'=>'Education'
+            ],
+            [
+                'title'=>'Professional Experience'
+            ],
+        ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PhoneSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class PhoneSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('phones')->insert([
+            'phone'=>'+1 5589 55488 55'
+        ]);
     }
 }

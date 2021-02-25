@@ -15,6 +15,7 @@ class CreatePageButtonsTable extends Migration
     {
         Schema::create('page_buttons', function (Blueprint $table) {
             $table->id();
+            $table->string('btn',500);
             $table->timestamps();
         });
     }

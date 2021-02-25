@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Title;
+use App\Models\PricingDetail;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TitleFactory extends Factory
+class PricingDetailFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Title::class;
+    protected $model = PricingDetail::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class TitleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'option'=>$this->faker->sentence(random_int(2,4))
         ];
     }
 }

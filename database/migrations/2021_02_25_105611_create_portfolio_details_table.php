@@ -15,6 +15,11 @@ class CreatePortfolioDetailsTable extends Migration
     {
         Schema::create('portfolio_details', function (Blueprint $table) {
             $table->id();
+            $table->string('title',100)->nullable();
+            $table->string('cat',100);
+            $table->string('client',100);
+            $table->string('date',100);
+            $table->string('url',100);
             $table->timestamps();
         });
     }

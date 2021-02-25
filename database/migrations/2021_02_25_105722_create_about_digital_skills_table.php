@@ -15,6 +15,8 @@ class CreateAboutDigitalSkillsTable extends Migration
     {
         Schema::create('about_digital_skills', function (Blueprint $table) {
             $table->id();
+            $table->string('skill',100);
+            $table->integer('percentage');
             $table->timestamps();
         });
     }

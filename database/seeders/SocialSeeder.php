@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SocialSeeder extends Seeder
 {
@@ -13,6 +14,22 @@ class SocialSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('socials')->insert([
+            [
+                'icon'=>'bx bxl-twitter',
+            ],
+            [
+                'icon'=>'bx bxl-facebook',
+            ],
+            [
+                'icon'=>'bx bxl-instagram',
+            ],
+            [
+                'icon'=>'bx bxl-skype',
+            ],
+            [
+                'icon'=>'bx bxl-linkedin',
+            ],
+        ]);
     }
 }

@@ -15,6 +15,8 @@ class CreateAboutArrowsTable extends Migration
     {
         Schema::create('about_arrows', function (Blueprint $table) {
             $table->id();
+            $table->string('title',100)->nullable();
+            $table->string('info',300);
             $table->timestamps();
         });
     }

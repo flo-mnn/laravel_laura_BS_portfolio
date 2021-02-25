@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class PageImageSeeder extends Seeder
+class PortfolioFilterSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,19 +14,19 @@ class PageImageSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('page_images')->insert([
+        DB::table('portfolio_filters')->insert([
             [
-                'src'=>'/img/hero-bg.jpg'
+                'filter'=>'all',
             ],
             [
-                'src'=>'/img/me.jpg'
+                'filter'=>'app',
             ],
             [
-                'src'=>'/img/testimonials-bg.jpg'
+                'filter'=>'card',
             ],
             [
-                'src'=>'/img/footer-bg.jpg'
-            ]
+                'filter'=>'web',
+            ],
         ]);
     }
 }

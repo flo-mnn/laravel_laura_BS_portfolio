@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class EducationSeeder extends Seeder
 {
@@ -13,6 +14,21 @@ class EducationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('education')->insert([
+            [
+                'title'=>'MASTER OF FINE ARTS & GRAPHIC DESIGN',
+                'start-date'=>2015,
+                'end-date'=>2016,
+                'place'=>'Rochester Institute of Technology, Rochester, NY',
+                'text'=>'Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend'
+            ],
+            [
+                'title'=>'BACHELOR OF FINE ARTS & GRAPHIC DESIGN',
+                'start-date'=>2010,
+                'end-date'=>2014,
+                'place'=>'Rochester Institute of Technology, Rochester, NY',
+                'text'=>'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila'
+            ]
+        ]);
     }
 }

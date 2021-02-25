@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TitleSeeder extends Seeder
 {
@@ -13,6 +14,31 @@ class TitleSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('titles')->insert([
+            [
+                "title"=>'about me',
+                "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
+            ],
+            [
+                "title"=>'my resume',
+                "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
+            ],
+            [
+                "title"=>'my services',
+                "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
+            ],
+            [
+                "title"=>'my portfolio',
+                "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
+            ],
+            [
+                "title"=>'pricing',
+                "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
+            ],
+            [
+                "title"=>'contact me',
+                "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
+            ]
+        ]);
     }
 }

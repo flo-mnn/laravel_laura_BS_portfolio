@@ -15,6 +15,11 @@ class CreateAboutNumbersTable extends Migration
     {
         Schema::create('about_numbers', function (Blueprint $table) {
             $table->id();
+            $table->string('icon',100);
+            $table->string('icon-color',100);
+            $table->integer('number');
+            $table->string('emphasis',40);
+            $table->string('text',500)->nullable();
             $table->timestamps();
         });
     }

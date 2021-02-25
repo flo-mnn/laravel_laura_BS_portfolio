@@ -15,6 +15,8 @@ class CreateContactCardsHeadsTable extends Migration
     {
         Schema::create('contact_cards_heads', function (Blueprint $table) {
             $table->id();
+            $table->string('icon',100);
+            $table->string('title',100)->nullable();
             $table->timestamps();
         });
     }

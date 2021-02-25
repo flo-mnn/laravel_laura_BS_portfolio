@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class FormSeeder extends Seeder
 {
@@ -13,6 +14,11 @@ class FormSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('forms')->insert([
+            "name"=>'Your name',
+            "email"=>'Your email',
+            "subject"=>'Subject',
+            "message"=>'Message',
+        ]);
     }
 }

@@ -15,6 +15,7 @@ class CreateResumeSubtitlesTable extends Migration
     {
         Schema::create('resume_subtitles', function (Blueprint $table) {
             $table->id();
+            $table->string('title',50);
             $table->timestamps();
         });
     }
