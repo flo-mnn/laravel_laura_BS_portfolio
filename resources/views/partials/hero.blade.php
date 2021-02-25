@@ -1,0 +1,10 @@
+<!-- ======= Hero Section ======= -->
+<section id="hero" style="background-image: url('../img/hero-bg.jpg');">
+    <div class="hero-container">
+      <h1>Laura Thomson</h1>
+      <h2>I'm a Professional Photographer In New York City</h2>
+      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
