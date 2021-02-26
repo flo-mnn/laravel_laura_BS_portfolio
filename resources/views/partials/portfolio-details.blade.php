@@ -1,3 +1,18 @@
+ <!-- ======= Breadcrumbs Section ======= -->
+ <section class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>{{$portfolio_item->title}}</h2>
+      <ol>
+        <li><a href="{{$bo? '/bo/' : '/'}}">Home</a></li>
+        <li><a href="{{$bo? '/bo/#portfolio' : '/#portfolio'}}">Portfolio</a></li>
+        <li>{{$portfolio_item->title}}</li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- Breadcrumbs Section -->
  <!-- ======= Portfolio Details Section ======= -->
  <section class="portfolio-details">
     <div class="container">
@@ -5,9 +20,9 @@
       <div class="portfolio-details-container">
 
         <div class="owl-carousel portfolio-details-carousel">
-          <img src="{{asset('{{$portfolio_item->src1}}')}}" class="img-fluid" alt="">
-          <img src="{{asset('{{$portfolio_item->src2}}')}}" class="img-fluid" alt="">
-          <img src="{{asset('{{$portfolio_item->src3}}')}}" class="img-fluid" alt="">
+          <img src="{{$portfolio_item->src1}}" class="img-fluid" alt="">
+          <img src="{{$portfolio_item->src2}}" class="img-fluid" alt="">
+          <img src="{{$portfolio_item->src3}}" class="img-fluid" alt="">
         </div>
 
         <div class="portfolio-info">

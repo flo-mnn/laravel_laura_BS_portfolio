@@ -1,7 +1,9 @@
  <!-- ======= About Me Section ======= -->
  <section id="about" class="about">
+   @if ($bo)
+       <a href="/bo/about/edit"><button class="edit btn btn-primary rounded-circle p-5">edit</button></a>
+   @endif
     <div class="container">
-
       <div class="section-title">
         <span>{{$titles[1]->title}}</span>
         <h2>{{$titles[1]->title}}</h2>

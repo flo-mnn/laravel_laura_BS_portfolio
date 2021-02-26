@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Models\AboutArrow;
 use App\Models\AboutDigitalSkill;
 use App\Models\AboutNumber;
@@ -38,9 +39,54 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-
+    $bo = false;
     return view('welcome', [
+        'about_arrows'=>AboutArrow::all(),
+        'about_digital_skills'=>AboutDigitalSkill::all(),
+        'about_numbers'=>AboutNumber::all(),
+        'contact_cards_heads'=>ContactCardsHead::all(),
+        'education'=>Education::all(),
+        'emails'=>Email::all(),
+        'experiences'=>Experience::all(),
+        'footers'=>Footer::first(),
+        'forms'=>Form::first(),
+        'navlinks'=>Navlink::all(),
+        // 'page_buttons'=>PageButton::all(),
+        'page_images'=>PageImage::all(),
+        'phones'=>Phone::all(),
+        'portfolio_filters'=>PortfolioFilter::all(),
+        'portfolio_items'=>PortfolioItem::all(),
+        'pricings'=>Pricing::all(),
+        'pricing_details'=>PricingDetail::all(),
+        'resume_subtitles'=>ResumeSubtitle::all(),
+        'resume_summaries'=>ResumeSummary::first(),
+        'services'=>Service::all(),
+        'socials'=>Social::all(),
+        'testimonials'=>Testimonial::all(),
+        'titles'=>Title::all(),
+        'bo'=>$bo
+    ]);
+});
+Route::get('/portfolio/show/{id}', function($id){
+    $bo = false;
+
+    return view('pages.portfolio-details',[
+        'footers'=>Footer::first(),
+        'navlinks'=>Navlink::all(),
+        'socials'=>Social::all(),
+        'page_images'=>PageImage::all(),
+        'portfolio_details'=> PortfolioDetail::first(),
+        'portfolio_item'=>PortfolioItem::find($id),
+        'bo'=>$bo
+    ]);
+});
+
+
+// BACK OFFICE
+
+Route::get('/bo', function(){
+    $bo = true;
+    return view('pages.bo',[
         'about_arrows'=>AboutArrow::all(),
         'about_digital_skills'=>AboutDigitalSkill::all(),
         'about_numbers'=>AboutNumber::all(),
@@ -64,6 +110,26 @@ Route::get('/', function () {
         'services'=>Service::all(),
         'socials'=>Social::all(),
         'testimonials'=>Testimonial::all(),
-        'titles'=>Title::all()
+        'titles'=>Title::all(),
+        'bo'=>$bo
     ]);
 });
+
+Route::get('bo/portfolio/edit/{id}', function($id){
+    $bo = true;
+
+    return view('pages.portfolio-details',[
+        'footers'=>Footer::first(),
+        'navlinks'=>Navlink::all(),
+        'socials'=>Social::all(),
+        'page_images'=>PageImage::all(),
+        'portfolio_details'=> PortfolioDetail::first(),
+        'portfolio_item'=>PortfolioItem::find($id),
+        'bo'=>$bo
+    ]);
+});
+
+
+// about bo
+Route::get('/bo/about/edit', [AboutController::class, 'edit']);
+Route::post('/bo/about/update', [AboutController::class, 'update']);

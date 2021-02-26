@@ -25,8 +25,12 @@
             <div class="portfolio-info">
               <h4 class="text-capitalize">{{$portfolio_item->title}}</h4>
               <p class="text-capitalize">{{$portfolio_item->filter}}</p>
-              <a href="{{$portfolio_item->cover_src}}" data-gall="portfolioGallery" class="venobox preview-link" title="{{$portfolio_item->title}}"><i class="bx bx-plus"></i></a>
-              <a href="/portfolio/show/{{$portfolio_item->id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="{{$portfolio_item->cover_src}}" data-gall="portfolioGallery" class="venobox preview-link" title="{{$portfolio_item->title}}">
+                @if ($bo ===false)
+                  <i class="bx bx-plus"></i>
+                @endif
+              </a>
+              <a href="{{$bo? '/bo/portfolio/edit/'.$portfolio_item->id : '/portfolio/show/'.$portfolio_item->id}}" class="details-link" title="More Details"><i class="bx bx-edit"></i></a>
             </div>
           </div>
         @endforeach
