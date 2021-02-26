@@ -18,7 +18,8 @@ class FooterSeeder extends Seeder
             "title"=>'Laura Thomson',
             "subtitle"=>'Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.',
             "copyright"=>'© Copyright Laura. All Rights Reserved',
-            "designed"=>'Designed by BootstrapMade',
+            "designed"=>'Designed by',
+            "link_name"=>'BootstrapMade',
             "link"=>'https://bootstrapmade.com/',
         ]);
     }

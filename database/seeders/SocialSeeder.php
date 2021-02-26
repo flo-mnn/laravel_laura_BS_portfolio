@@ -16,19 +16,24 @@ class SocialSeeder extends Seeder
     {
         DB::table('socials')->insert([
             [
-                'icon'=>'bx bxl-twitter',
+                'icon_contact'=>'icofont-twitter',
+                'icon_footer'=>'bx bxl-twitter',
             ],
             [
-                'icon'=>'bx bxl-facebook',
+                'icon_contact'=>'icofont-facebook',
+                'icon_footer'=>'bx bxl-facebook',
             ],
             [
-                'icon'=>'bx bxl-instagram',
+                'icon_contact'=>'icofont-instagram',
+                'icon_footer'=>'bx bxl-instagram',
             ],
             [
-                'icon'=>'bx bxl-skype',
+                'icon_contact'=>'icofont-skype',
+                'icon_footer'=>'bx bxl-skype',
             ],
             [
-                'icon'=>'bx bxl-linkedin',
+                'icon_contact'=>'icofont-linkedin',
+                'icon_footer'=>'bx bxl-linkedin',
             ],
         ]);
     }

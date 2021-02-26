@@ -16,8 +16,8 @@ class CreatePortfolioItemsTable extends Migration
         Schema::create('portfolio_items', function (Blueprint $table) {
             $table->id();
             $table->string('title',100);
-            $table->string('cover-src',500);
-            $table->string('cat',100);
+            $table->string('cover_src',500);
+            $table->string('filter',20);
             $table->string('category',100);
             $table->string('src1',500)->nullable();
             $table->string('src2',500)->nullable();

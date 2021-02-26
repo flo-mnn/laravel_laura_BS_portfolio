@@ -17,8 +17,8 @@ class PortfolioItemSeeder extends Seeder
         DB::table('portfolio_items')->insert([
             [
                 'title'=>'App 1',
-                'cover-src'=>'/img/portfolio/portfolio-1.jpg',
-                'cat'=>'app',
+                'cover_src'=>'/img/portfolio/portfolio-1.jpg',
+                'filter'=>'app',
                 'category'=>'app',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -28,8 +28,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'Web 3',
-                'cover-src'=>'/img/portfolio/portfolio-2.jpg',
-                'cat'=>'web',
+                'cover_src'=>'/img/portfolio/portfolio-2.jpg',
+                'filter'=>'web',
                 'category'=>'web design',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -39,8 +39,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'App 2',
-                'cover-src'=>'/img/portfolio/portfolio-3.jpg',
-                'cat'=>'app',
+                'cover_src'=>'/img/portfolio/portfolio-3.jpg',
+                'filter'=>'app',
                 'category'=>'app',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -50,8 +50,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'Card 2',
-                'cover-src'=>'/img/portfolio/portfolio-4.jpg',
-                'cat'=>'card',
+                'cover_src'=>'/img/portfolio/portfolio-4.jpg',
+                'filter'=>'card',
                 'category'=>'card',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -61,8 +61,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'Web 2',
-                'cover-src'=>'/img/portfolio/portfolio-5.jpg',
-                'cat'=>'web',
+                'cover_src'=>'/img/portfolio/portfolio-5.jpg',
+                'filter'=>'web',
                 'category'=>'web',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -72,8 +72,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'App 3',
-                'cover-src'=>'/img/portfolio/portfolio-6.jpg',
-                'cat'=>'app',
+                'cover_src'=>'/img/portfolio/portfolio-6.jpg',
+                'filter'=>'app',
                 'category'=>'app',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -83,8 +83,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'Card 1',
-                'cover-src'=>'/img/portfolio/portfolio-7.jpg',
-                'cat'=>'card',
+                'cover_src'=>'/img/portfolio/portfolio-7.jpg',
+                'filter'=>'card',
                 'category'=>'card',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -94,8 +94,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'Card 2',
-                'cover-src'=>'/img/portfolio/portfolio-8.jpg',
-                'cat'=>'card',
+                'cover_src'=>'/img/portfolio/portfolio-8.jpg',
+                'filter'=>'card',
                 'category'=>'card',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',
@@ -105,8 +105,8 @@ class PortfolioItemSeeder extends Seeder
             ],
             [
                 'title'=>'Web 3',
-                'cover-src'=>'/img/portfolio/portfolio-9.jpg',
-                'cat'=>'web',
+                'cover_src'=>'/img/portfolio/portfolio-9.jpg',
+                'filter'=>'web',
                 'category'=>'web',
                 'src1'=>'img/portfolio/portfolio-details-1.jpg',
                 'src2'=>'img/portfolio/portfolio-details-2.jpg',

@@ -5,27 +5,27 @@
       <div class="portfolio-details-container">
 
         <div class="owl-carousel portfolio-details-carousel">
-          <img src="{{asset('img/portfolio/portfolio-details-1.jpg')}}" class="img-fluid" alt="">
-          <img src="{{asset('img/portfolio/portfolio-details-2.jpg')}}" class="img-fluid" alt="">
-          <img src="{{asset('img/portfolio/portfolio-details-3.jpg')}}" class="img-fluid" alt="">
+          <img src="{{asset('{{$portfolio_item->src1}}')}}" class="img-fluid" alt="">
+          <img src="{{asset('{{$portfolio_item->src2}}')}}" class="img-fluid" alt="">
+          <img src="{{asset('{{$portfolio_item->src3}}')}}" class="img-fluid" alt="">
         </div>
 
         <div class="portfolio-info">
-          <h3>Project information</h3>
+          <h3>{{$portfolio_details->title}}</h3>
           <ul>
-            <li><strong>Category</strong>: Web design</li>
-            <li><strong>Client</strong>: ASU Company</li>
-            <li><strong>Project date</strong>: 01 March, 2020</li>
-            <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            <li><strong>{{$portfolio_details->cat}}</strong>: {{$portfolio_item->category}}</li>
+            <li><strong>{{$portfolio_details->client}}</strong>: {{$portfolio_item->client}}</li>
+            <li><strong>{{$portfolio_details->date}}</strong>: {{$portfolio_item->date}}</li>
+            <li><strong>{{$portfolio_details->url}}</strong>: <a href="{{$portfolio_item->url}}">{{$portfolio_item->url}}</a></li>
           </ul>
         </div>
 
       </div>
 
       <div class="portfolio-description">
-        <h2>This is an example of portfolio detail</h2>
+        <h2>{{$portfolio_item->title}}</h2>
         <p>
-          Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+          {{$portfolio_item->text}}
         </p>
       </div>
     </div>

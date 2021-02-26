@@ -15,7 +15,8 @@ class CreateSocialsTable extends Migration
     {
         Schema::create('socials', function (Blueprint $table) {
             $table->id();
-            $table->string('icon',50);
+            $table->string('icon_contact',50);
+            $table->string('icon_footer',50);
             $table->string('url',500)->default('#');
             $table->timestamps();
         });

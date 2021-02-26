@@ -16,6 +16,10 @@ class TitleSeeder extends Seeder
     {
         DB::table('titles')->insert([
             [
+                "title"=>'Laura Thomson',
+                "subtitle"=>"I'M A PROFESSIONAL PHOTOGRAPHER IN NEW YORK CITY",
+            ],
+            [
                 "title"=>'about me',
                 "subtitle"=>'Sit sint consectetur velit quisquam cupiditate impedit suscipit alias',
             ],
