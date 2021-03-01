@@ -21,12 +21,13 @@
            
             <div class="col-lg-8 d-flex flex-column align-items-stretch">
               <div class="content pl-lg-4 d-flex flex-column justify-content-center">
-                <div class="row">
+                <div class="row about-arrows">
                   <div class="col-lg-6">
                     <ul>
                   @foreach ($about_arrows as $about_arrow)
-                        <li class="edit-parent"><i class="icofont-rounded-right"></i> <strong>{{$about_arrow->title}}</strong> {{$about_arrow->info}}
-                          <button type="button" data-toggle="modal" data-target="#edit-about-img" class="edit btn btn-warning rounded-circle px-3 py-2 id-{{$about_arrow->id}}"><i class="bx bx-edit"></i></button>
+                  <li class="edit-parent">
+                    <button type="button" data-toggle="modal" data-target="#edit-about-arrow" class="edit btn btn-warning rounded-circle px-3 py-2" id="{{$about_arrow->id}}"><i class="bx bx-edit"></i></button>
+                    <i class="icofont-rounded-right"></i> <strong>{{$about_arrow->title}}</strong> <span>{{$about_arrow->info}}</span>
                         </li>
                     @if (
                       (count($about_arrows) % 2 === 0 && $loop->iteration == (count($about_arrows)/2))
@@ -132,6 +133,38 @@
           </div>
         </div> 
         <!-- Modal edit img end-->
+         <!-- Modal arrow -->
+         <div class="modal fade" id="edit-about-arrow" >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="edit-about-arrow-title">Change Info</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="/bo/about/arrow/update/id" method="POST" id="update-about-arrow" >
+                  @csrf
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Title : info</span>
+                    </div>
+                    <input type="text" id="title" class="form-control" name="title">
+                    <input type="text" id="info" class="form-control" name="info">
+                  </div>
+                    
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <input type="submit" class="btn btn-success" value="Update" form="update-about-arrow">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Modal edit arrow end-->
       </section><!-- End About Me Section -->
 
 @endsection

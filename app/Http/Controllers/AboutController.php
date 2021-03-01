@@ -44,4 +44,12 @@ class AboutController extends Controller
         $img->save();
         return redirect()->back();
     }
+
+    public function updateArrow(Request $request, $id){
+        $arrow = AboutArrow::find($id);
+        $arrow->title = $request->title;
+        $arrow->info = $request->info;
+        $arrow->save();
+        return redirect()->back();
+    }
 }

@@ -134,3 +134,4 @@ Route::get('bo/portfolio/edit/{id}', function($id){
 Route::get('/bo/about/edit', [AboutController::class, 'edit']);
 Route::post('/bo/about/title/update', [AboutController::class, 'updateTitle']);
 Route::post('/bo/about/img/update', [AboutController::class, 'updateImg']);
+Route::post('/bo/about/arrow/update/{id}', [AboutController::class, 'updateArrow']);

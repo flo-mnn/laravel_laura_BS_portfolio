@@ -5,7 +5,7 @@
       <div class="owl-carousel testimonials-carousel">
         @foreach ($testimonials as $testimonial)
           <div class="testimonial-item">
-            <img src="{{$testimonial->src}}" class="testimonial-img" alt="">
+            <img src="/storage/img/{{$testimonial->src}}" class="testimonial-img" alt="">
             <h3>{{$testimonial->name}}</h3>
             <h4>{{$testimonial->job}}</h4>
             <p>

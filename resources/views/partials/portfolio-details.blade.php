@@ -20,9 +20,9 @@
       <div class="portfolio-details-container">
 
         <div class="owl-carousel portfolio-details-carousel">
-          <img src="{{$portfolio_item->src1}}" class="img-fluid" alt="">
-          <img src="{{$portfolio_item->src2}}" class="img-fluid" alt="">
-          <img src="{{$portfolio_item->src3}}" class="img-fluid" alt="">
+          <img src="/storage/img/{{$portfolio_item->src1}}" class="img-fluid" alt="">
+          <img src="/storage/img/{{$portfolio_item->src2}}" class="img-fluid" alt="">
+          <img src="/storage/img/{{$portfolio_item->src3}}" class="img-fluid" alt="">
         </div>
 
         <div class="portfolio-info">

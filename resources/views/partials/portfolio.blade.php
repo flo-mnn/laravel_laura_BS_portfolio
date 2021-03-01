@@ -21,7 +21,7 @@
       <div class="row portfolio-container">
         @foreach ($portfolio_items as $portfolio_item)
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{$portfolio_item->filter}}">
-            <div class="portfolio-img"><img src="{{$portfolio_item->cover_src}}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="/storage/img/{{$portfolio_item->cover_src}}" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4 class="text-capitalize">{{$portfolio_item->title}}</h4>
               <p class="text-capitalize">{{$portfolio_item->filter}}</p>
