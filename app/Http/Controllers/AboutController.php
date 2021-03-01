@@ -11,6 +11,7 @@ use App\Models\PageImage;
 use App\Models\Social;
 use App\Models\Title;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AboutController extends Controller
 {
@@ -27,50 +28,20 @@ class AboutController extends Controller
             'about_digital_skills'=>AboutDigitalSkill::all()
         ]);
     }
-    public function update(Request $request){
-        // arrows section
+    public function updateTitle(Request $request){
         $title = Title::find(2);
-        $title->title = $request->titles_title;
-        $title->subtitle = $request->titles_subtitle;
+        $title->title = $request->title;
+        $title->subtitle = $request->subtitle;
         $title->save();
+        return redirect()->back();
+    }
 
-        $about_arrows = $request->input('about_arrows');
-    
-        foreach ($about_arrows as $row) {
-            $arrow = AboutArrow::find($row['id']); 
-            $arrow->title = $row['title']; 
-            $arrow->info = $row['info']; 
-            $arrow->save();
-           
-        };
-        // number section
-        $about_numbers = $request->input('about_numbers');
-    
-        foreach ($about_numbers as $row) {
-            $number = AboutNumber::find($row['id']); 
-            $number->icon = $row['icon']; 
-            $number->icon_color = $row['icon_color']; 
-            $number->number = $row['number']; 
-            $number->emphasis = $row['emphasis']; 
-            $number->text = $row['text']; 
-            $number->save();
-           
-        };
-        // digital section
-        $about_digital_skills = $request->input('about_digital_skills');
-    
-        foreach ($about_digital_skills as $row) {
-            $skill = AboutDigitalSkill::find($row['id']); 
-            $skill->skill = $row['skill']; 
-            $skill->percentage = $row['percentage']; 
-            $skill->save();
-           
-        };
-        // image
-            $me_img = PageImage::find(2);
-            $me_img->src = $request->me_img;
-            $me_img->save();
-
+    public function updateImg(Request $request){
+        $img = PageImage::find(2);
+        Storage::delete('public/img/'.$img->src);
+        Storage::put('public/img/', $request->file('src'));
+        $img->src = $request->file('src')->hashName();
+        $img->save();
         return redirect()->back();
     }
 }

@@ -1,5 +1,5 @@
  <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials" style="background-image: url('{{$page_images[2]->src}}');">
+  <section id="testimonials" class="testimonials" style="background-image: url('/storage/img/{{$page_images[2]->src}}');">
     <div class="container">
 
       <div class="owl-carousel testimonials-carousel">

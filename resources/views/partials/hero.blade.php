@@ -1,5 +1,5 @@
 <!-- ======= Hero Section ======= -->
-<section id="hero" style="background-image: url('{{$page_images[0]->src}}');">
+<section id="hero" style="background-image: url('storage/img/{{$page_images[0]->src}}');">
     <div class="hero-container">
       <h1>{{$titles[0]->title}}</h1>
       <h2>{{$titles[0]->subtitle}}</h2>

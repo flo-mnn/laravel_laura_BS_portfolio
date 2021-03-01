@@ -1,5 +1,5 @@
 <!-- ======= Footer ======= -->
-  <footer id="footer" style="background-image: url('{{$page_images[3]->src}}');">
+  <footer id="footer" style="background-image: url('/storage/img/{{$page_images[3]->src}}');">
     <div class="container">
       <h3>{{$footers->title}}</h3>
       <p>{{$footers->subtitle}}</p>

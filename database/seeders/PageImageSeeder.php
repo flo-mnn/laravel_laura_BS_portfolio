@@ -16,16 +16,16 @@ class PageImageSeeder extends Seeder
     {
         DB::table('page_images')->insert([
             [
-                'src'=>'/img/hero-bg.jpg'
+                'src'=>'hero-bg.jpg'
             ],
             [
-                'src'=>'/img/me.jpg'
+                'src'=>'me.jpg'
             ],
             [
-                'src'=>'/img/testimonials-bg.jpg'
+                'src'=>'testimonials-bg.jpg'
             ],
             [
-                'src'=>'/img/footer-bg.jpg'
+                'src'=>'footer-bg.jpg'
             ]
         ]);
     }

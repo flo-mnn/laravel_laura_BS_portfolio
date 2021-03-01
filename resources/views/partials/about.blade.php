@@ -11,7 +11,7 @@
       </div>
 
       <div class="row">
-        <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start" style="background-image: url('{{$page_images[1]->src}}');"></div>
+        <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start" style="background-image: url('/storage/img/{{$page_images[1]->src}}');"></div>
         <div class="col-lg-8 d-flex flex-column align-items-stretch">
           <div class="content pl-lg-4 d-flex flex-column justify-content-center">
             <div class="row">
