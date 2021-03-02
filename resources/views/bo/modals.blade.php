@@ -192,8 +192,53 @@
             </div>
         </div> 
           <!-- Modal edit arrow end-->
-
-
+{{-- edit summary --}}
+<!-- Modal footer general -->
+<div class="modal fade" id="edit-summary" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-summary">Change Social Media</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/bo/summary/update" method="POST" id="update-summary" >
+          @csrf
+          <div class="form-group">
+            <label >Name</label>
+            <input class="form-control" type="text" name="name" value="{{$resume_summaries->name}}">
+          </div>
+          <div class="form-group">
+            <label >Text</label>
+            <textarea class="form-control" type="text" name="text" >{{$resume_summaries->text}}</textarea>
+          </div>
+          <div class="form-group">
+            <label >Address</label>
+            <input class="form-control" type="text" name="address" value="{{$resume_summaries->address}}">
+          </div>
+          <div class="form-group">
+            <label >Phone</label>
+            <input class="form-control" type="text" name="phone" value="{{$resume_summaries->phone}}">
+          </div>
+          <div class="form-group">
+            <label >Email</label>
+            <input class="form-control" type="text" name="email" value="{{$resume_summaries->email}}">
+          </div>
+          
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-success" value="Update" form="update-summary">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div> 
+<!-- Modal footer general end-->
+{{-- to do edit education form --}}
            <!-- Modal edit education -->
            <div class="modal fade" id="edit-education" >
             <div class="modal-dialog">

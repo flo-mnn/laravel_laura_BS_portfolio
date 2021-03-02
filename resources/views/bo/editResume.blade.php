@@ -14,7 +14,8 @@
       <div class="row">
         <div class="col-lg-6">
           <h3 class="resume-title">{{$resume_subtitles[0]->title}}</h3>
-          <div class="resume-item pb-0">
+          <div class="resume-item pb-0 edit-parent">
+           <button type="button" data-toggle="modal" data-target="#edit-summary" class="edit btn btn-warning rounded-circle px-3 py-2"><i class="bx bx-edit"></i></button>
             <h4>{{$resume_summaries->name}}</h4>
             <p><em>{{$resume_summaries->text}}</em></p>
             <p>

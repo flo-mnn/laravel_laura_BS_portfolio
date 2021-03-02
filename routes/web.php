@@ -147,8 +147,12 @@ Route::post('/bo/about/img/update', [AboutController::class, 'updateImg']);
 Route::post('/bo/about/arrow/add', [AboutController::class, 'storeArrow']);
 Route::post('/bo/about/arrow/update/{arrow}', [AboutController::class, 'updateArrow']);
 Route::post('/bo/about/arrow/delete/{arrow}', [AboutController::class, 'destroyArrow']);
-// section titles
+// resume
 Route::post('/bo/resumes/title/update', [ResumeController::class, 'updateTitle']);
+Route::post('/bo/summary/update', [ResumeController::class, 'updateSummary']);
+
+
+// section titles
 Route::post('/bo/portfolios/title/update', [PortfolioController::class, 'updateTitle']);
 Route::post('/bo/contacts/title/update', [ContactController::class, 'updateTitle']);
 // testimonials bo
