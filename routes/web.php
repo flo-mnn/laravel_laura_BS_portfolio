@@ -5,6 +5,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\TestimonialController;
 use App\Models\AboutArrow;
 use App\Models\AboutDigitalSkill;
@@ -140,11 +142,15 @@ Route::post('/bo/navbar/update', [NavbarController::class, 'update']);
 Route::post('/bo/heroes/title/update', [HeroController::class, 'updateTitle']);
 Route::post('/bo/heroes/img/update', [HeroController::class, 'updateImg']);
 // about bo
-Route::post('/bo/about/title/update', [AboutController::class, 'updateTitle']);
+Route::post('/bo/abouts/title/update', [AboutController::class, 'updateTitle']);
 Route::post('/bo/about/img/update', [AboutController::class, 'updateImg']);
 Route::post('/bo/about/arrow/add', [AboutController::class, 'storeArrow']);
 Route::post('/bo/about/arrow/update/{arrow}', [AboutController::class, 'updateArrow']);
 Route::post('/bo/about/arrow/delete/{arrow}', [AboutController::class, 'destroyArrow']);
+// section titles
+Route::post('/bo/resumes/title/update', [ResumeController::class, 'updateTitle']);
+Route::post('/bo/portfolios/title/update', [PortfolioController::class, 'updateTitle']);
+Route::post('/bo/contacts/title/update', [ContactController::class, 'updateTitle']);
 // testimonials bo
 Route::post('/bo/testimonial/img/update', [TestimonialController::class, 'updateImg']);
 //socials

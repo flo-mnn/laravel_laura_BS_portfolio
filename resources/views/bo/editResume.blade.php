@@ -2,10 +2,13 @@
  <section id="resume" class="resume">
     <div class="container">
 
-      <div class="section-title">
-        <span>{{$titles[2]->title}}</span>
-        <h2>{{$titles[2]->title}}</h2>
-        <p>{{$titles[2]->subtitle}}</p>
+      <div class="section-title edit-parent">
+        <button type="button" data-toggle="modal" data-target="#edit-title" id="resumes" class="edit edit-title btn btn-warning rounded-circle px-3 py-2 text-light"><i class="bx bx-edit"></i></button>
+        <div class="title-update-div">   
+          <span>{{$titles[2]->title}}</span>
+          <h2>{{$titles[2]->title}}</h2>
+          <p>{{$titles[2]->subtitle}}</p>
+        </div>
       </div>
 
       <div class="row">

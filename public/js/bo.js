@@ -72,3 +72,27 @@ socialSelect.addEventListener('change',function(){
 });
 
 
+// edit title
+let editTitleBtns = document.querySelectorAll('.edit-title');
+let editDiv = document.querySelectorAll('.title-update-div');
+let editTitleForm = document.querySelector('#edit-title').querySelector('form');
+let inputSectionTitle = editTitleForm.querySelector('#section-title-input');
+let inputSectionSubtitle = editTitleForm.querySelector('#section-subtitle-input');
+
+for (let i = 0; i < editTitleBtns.length; i++) {
+    editTitleBtns[i].addEventListener('click',function(){
+        console.log(editTitleBtns[i].getAttribute('id'));
+        editTitleForm.action = `/bo/${editTitleBtns[i].getAttribute('id')}/title/update`;
+        let titleValue;
+        let subtitleValue;
+        if (i==0) {
+            titleValue = editDiv[i].querySelector('h1');
+            subtitleValue = editDiv[i].querySelector('h2');
+        } else {     
+            titleValue = editDiv[i].querySelector('h2');
+            subtitleValue = editDiv[i].querySelector('p');
+        }
+        inputSectionTitle.value = titleValue.textContent;
+        inputSectionSubtitle.value = subtitleValue.textContent;
+    });
+}

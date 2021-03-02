@@ -4,11 +4,13 @@
         <div class="container">
           <div class="section-title edit-parent">
             {{-- edit button --}}
-            <button type="button" data-toggle="modal" data-target="#edit-about-title" class="edit btn btn-warning rounded-circle px-3 py-2 text-light"><i class="bx bx-edit"></i></button>
+            <button type="button" data-toggle="modal" data-target="#edit-title" id="abouts" class="edit edit-title btn btn-warning rounded-circle px-3 py-2 text-light"><i class="bx bx-edit"></i></button>
             {{-- content --}}
-            <span>{{$titles[1]->title}}</span>
-            <h2>{{$titles[1]->title}}</h2>
-            <p>{{$titles[1]->subtitle}}</p>
+            <div class="title-update-div">
+              <span>{{$titles[1]->title}}</span>
+              <h2>{{$titles[1]->title}}</h2>
+              <p>{{$titles[1]->subtitle}}</p>
+            </div>
           </div>
           
           <div class="row">

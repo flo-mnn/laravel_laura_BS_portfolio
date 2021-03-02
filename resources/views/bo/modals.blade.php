@@ -57,29 +57,29 @@
             </div>
         </div>
           <!-- Modal edit navbar end-->
-        <!-- Modal edit title-->
-        <div class="modal fade" id="edit-about-title" >
+        <!-- Modal edit section title-->
+        <div class="modal fade" id="edit-title" >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="edit-about-title">Change About Header</h5>
+                  <h5 class="modal-title" id="edit-title">Change Section Header</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form action="/bo/about/title/update" method="POST" id="update-about-title">
+                  <form action="/bo/section/title/update" method="POST" id="update-title">
                     @csrf
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Title" name="title" value="{{$titles[1]->title}}">
+                        <input type="text" class="form-control" placeholder="Your Title" id="section-title-input" name="title" value="{{$titles[1]->title}}">
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Subtitle" name="subtitle" value="{{$titles[1]->subtitle}}">
+                        <input type="text" class="form-control" placeholder="Your Subtitle" id="section-subtitle-input" name="subtitle" value="{{$titles[1]->subtitle}}">
                       </div>
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" value="Update" form="update-about-title">
+                    <input type="submit" class="btn btn-success" value="Update" form="update-title">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   
                 </div>

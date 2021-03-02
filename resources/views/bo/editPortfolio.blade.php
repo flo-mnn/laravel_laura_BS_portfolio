@@ -2,10 +2,13 @@
 <section id="portfolio" class="portfolio">
     <div class="container">
 
-      <div class="section-title">
-        <span>{{$titles[4]->title}}</span>
-        <h2>{{$titles[4]->title}}</h2>
-        <p>{{$titles[4]->subtitle}}</p>
+      <div class="section-title edit-parent">
+        <button type="button" data-toggle="modal" data-target="#edit-title" id="portfolios" class="edit edit-title btn btn-warning rounded-circle px-3 py-2 text-light"><i class="bx bx-edit"></i></button>
+        <div class="title-update-div">
+          <span>{{$titles[4]->title}}</span>
+          <h2>{{$titles[4]->title}}</h2>
+          <p>{{$titles[4]->subtitle}}</p>
+        </div>
       </div>
 
       <ul id="portfolio-flters" class="d-flex justify-content-center">
