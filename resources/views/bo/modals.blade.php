@@ -153,6 +153,83 @@
             </div>
         </div> 
           <!-- Modal edit arrow end-->
+
+                   <!-- Modal arrow -->
+        <div class="modal fade" id="edit-about-arrow" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="edit-about-arrow-title">Change Info</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/bo/about/arrow/update/id" method="POST" id="update-about-arrow" >
+                    @csrf
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Title : info</span>
+                      </div>
+                      <input type="text" id="title" class="form-control" name="title">
+                      <input type="text" id="info" class="form-control" name="info">
+                    </div>
+                      
+                    </form>
+                  </div>
+                  <div class="modal-footer footer-update">
+                    <input type="submit" class="btn btn-success" value="Update" form="update-about-arrow">
+                    <form action="/bo/about/arrow/delete/id" method="POST" id="delete-arrow">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">delete</button>
+                    </form>  
+                  </div>
+                  <div class="modal-footer footer-create d-none">
+                    <input type="submit" class="btn btn-primary" value="Add" form="update-about-arrow">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                  </div>
+              </div>
+            </div>
+        </div> 
+          <!-- Modal edit arrow end-->
+
+
+           <!-- Modal edit education -->
+           <div class="modal fade" id="edit-education" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="edit-education">Edit Education Item</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/bo/education/update/id" method="POST" id="update-about-arrow" >
+                    @csrf
+                    <div class="form-group">
+                      <label >Title</label>
+                      <input class="form-control" type="text" name="title" value="{{$footers->title}}">
+                    </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer footer-update">
+                    <input type="submit" class="btn btn-success" value="Update" form="update-about-arrow">
+                    <form action="/bo/about/arrow/delete/id" method="POST" id="delete-arrow">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">delete</button>
+                    </form>  
+                  </div>
+                  <div class="modal-footer footer-create d-none">
+                    <input type="submit" class="btn btn-primary" value="Add" form="update-about-arrow">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+                  </div>
+              </div>
+            </div>
+        </div> 
+          <!-- Modal edit education end-->
+
+
            <!-- Modal socials -->
         <div class="modal fade" id="edit-socials" >
             <div class="modal-dialog">

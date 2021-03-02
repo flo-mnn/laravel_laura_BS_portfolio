@@ -19,8 +19,8 @@ let allAboutArrows = document.querySelector('.about-arrows').querySelectorAll('l
 let allAboutArrowsBtn = [];
 let arrowsForm = document.querySelector('#edit-about-arrow').querySelector('form');
 let arrowsDelete = document.querySelector('#delete-arrow');
-let footerUpdate = document.querySelector('.footer-update');
-let footerCreate = document.querySelector('.footer-create');
+let footerUpdate = document.querySelector('#edit-about-arrow').querySelector('.footer-update');
+let footerCreate = document.querySelector('#edit-about-arrow').querySelector('.footer-create');
 
 for (let i = 0; i < allAboutArrows.length; i++) {
     let btn = allAboutArrows[i].querySelector('button');
@@ -96,3 +96,43 @@ for (let i = 0; i < editTitleBtns.length; i++) {
         inputSectionSubtitle.value = subtitleValue.textContent;
     });
 }
+
+// toggle multiple
+let addBtns = document.querySelectorAll('.add');
+let allMultipleFooterUpdate = document.querySelectorAll('.footer-update')
+let allMultipleFooterCreate = document.querySelectorAll('.footer-create')
+for (let i = 0; i < editBtn.length; i++) {
+    editBtn[i].addEventListener('click',function(){
+        for (let i = 0; i < allMultipleFooterUpdate.length; i++) {
+            const element = allMultipleFooterUpdate[i];
+            element.classList.toggle('d-none')
+        }
+        for (let i = 0; i < allMultipleFooterCreate.length; i++) {
+            const element = allMultipleFooterCreate[i];
+            element.classList.toggle('d-none')
+        };
+    });
+    
+}
+for (let i = 0; i < addBtns.length; i++) {
+    addBtns[i].addEventListener('click',function(){
+        for (let i = 0; i < allMultipleFooterUpdate.length; i++) {
+            const element = allMultipleFooterUpdate[i];
+            element.classList.toggle('d-none');
+        }
+        for (let i = 0; i < allMultipleFooterCreate.length; i++) {
+            const element = allMultipleFooterCreate[i];
+            element.classList.toggle('d-none')
+        }
+        editEducationForm.action = `/bo/education/add`;
+        //attention, get it back with editing see below
+    });   
+}
+
+// education
+// when editing, turn form action back
+// let id = allAboutArrowsBtn[i].getAttribute('id');
+//         arrowsForm.action = `/bo/about/arrow/update/${id}`;
+//Create
+let createEducationBtn = document.querySelector('.create-education');
+let editEducationForm = document.querySelector('#edit-education').querySelector('form');

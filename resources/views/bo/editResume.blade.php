@@ -25,15 +25,18 @@
             </ul>
             </p>
           </div>
-          <h3 class="resume-title">{{$resume_subtitles[1]->title}}</h3>
-          @for ($i = count($education)-1; $i >= 0; $i--)
-            <div class="resume-item">
-              <h4>{{$education[$i]->title}}</h4>
-              <h5>{{$education[$i]->start_date}} {{$education[$i]->end_date? ($education[$i]->end_date != $education[$i]->start_date ? '-'.$education[$i]->end_date : null) : '- Present'}}</h5>
-              <p><em>{{$education[$i]->place}}</em></p>
-              <p>{{$education[$i]->text}}</p>
-            </div>
-          @endfor
+          <div class="add-parent">
+            <button type="button" data-toggle="modal" data-target="#edit-education" class="create-education add btn btn-primary rounded-circle px-3 py-2"><i class="bx bx-list-plus"></i></button>
+            <h3 class="resume-title">{{$resume_subtitles[1]->title}}</h3>
+            @for ($i = count($education)-1; $i >= 0; $i--)
+              <div class="resume-item">
+                <h4>{{$education[$i]->title}}</h4>
+                <h5>{{$education[$i]->start_date}} {{$education[$i]->end_date? ($education[$i]->end_date != $education[$i]->start_date ? '-'.$education[$i]->end_date : null) : '- Present'}}</h5>
+                <p><em>{{$education[$i]->place}}</em></p>
+                <p>{{$education[$i]->text}}</p>
+              </div>
+            @endfor
+          </div>
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">{{$resume_subtitles[2]->title}}</h3>
