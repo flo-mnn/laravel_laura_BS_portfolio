@@ -15,19 +15,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AboutController extends Controller
 {
-    public function edit(){
-        return view('bo.about.edit', [
-            'footers'=>Footer::first(),
-            'navlinks'=>Navlink::all(),
-            'socials'=>Social::all(),
-            'page_images'=>PageImage::all(),
-            'me_img'=>PageImage::find(2),
-            'title'=>Title::find(2),
-            'about_arrows'=>AboutArrow::all(),
-            'about_numbers'=>AboutNumber::all(),
-            'about_digital_skills'=>AboutDigitalSkill::all()
-        ]);
-    }
+   
+
     public function updateTitle(Request $request){
         $title = Title::find(2);
         $title->title = $request->title;
@@ -45,11 +34,25 @@ class AboutController extends Controller
         return redirect()->back();
     }
 
-    public function updateArrow(Request $request, $id){
-        $arrow = AboutArrow::find($id);
+    public function storeArrow(Request $request){
+        $arrow = new AboutArrow();
         $arrow->title = $request->title;
         $arrow->info = $request->info;
         $arrow->save();
+        return redirect()->back();
+    }
+
+    public function updateArrow(Request $request, AboutArrow $arrow){
+        // $arrow = AboutArrow::find($id);
+        $arrow->title = $request->title;
+        $arrow->info = $request->info;
+        $arrow->save();
+        return redirect()->back();
+    }
+
+    public function destroyArrow(Request $request, AboutArrow $arrow){
+        $arrow->delete();
+
         return redirect()->back();
     }
 }
