@@ -18,7 +18,7 @@
                 <h3>{{$contact_cards_heads[0]->title}}</h3>
                 <div class="social-links">
                   @foreach ($socials as $social)
-                    <a href="{{$social->url}}" class="twitter"><i class="{{$social->icon_contact}}"></i></a>  
+                    <a href="{{$social->url}}" class="twitter"><i class="icofont-{{$social->icon}}"></i></a>  
                   @endforeach
                 </div>
               </div>

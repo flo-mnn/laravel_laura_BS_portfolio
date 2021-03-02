@@ -38,9 +38,12 @@
                   <form action="/bo/navbar/update" method="POST" id="update-navlink">
                     @csrf
                       @foreach ($navlinks as $navlink)
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your NavLink #{{$navlink->id}}" name="link[{{$navlink->id}}]" value="{{$navlink->link}}">
-                      </div>
+                      
+                      @if ($navlink->id !=4)  {{--do not display services section--}}   
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Your NavLink #{{$navlink->id}}" name="link[{{$navlink->id}}]" value="{{$navlink->link}}">
+                        </div>
+                      @endif
                       @endforeach
                       
                     </form>
@@ -150,3 +153,47 @@
             </div>
         </div> 
           <!-- Modal edit arrow end-->
+           <!-- Modal socials -->
+        <div class="modal fade" id="edit-socials" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="edit-socials">Change Social Media</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/bo/socials/update" method="POST" id="update-socials" >
+                    @csrf
+                    <div class="form-group">
+                      <label >Please select social media icon</label>
+                      <select class="form-control" name="id">
+                        @foreach ($socials as $social)
+                            <option value="{{$social->id}}">{{$social->icon}}</option>
+                        @endforeach
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label >To Update, enter the new icon name first</label>
+                      <input class="form-control" type="text" name="icon" value="" aria-describedby="iconHelp">
+                      <small id="iconHelp" class="form-text text-muted">Please go to <a href="https://boxicons.com/" target="_blank">BoxIcons</a> and filter "Logos" to find your new icon</small>
+                    </div>
+                    <div class="form-group">
+                      <label >Please enter your social media new link</label>
+                      <input class="form-control" type="text" name="url" value="">
+                    </div>
+                      
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" class="btn btn-success" value="Update" form="update-socials">
+                    <form action="/bo/socials/delete/{{$socials[0]->id}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">delete</button>
+                    </form>  
+                  </div>
+              </div>
+            </div>
+        </div> 
+          <!-- Modal socials end-->

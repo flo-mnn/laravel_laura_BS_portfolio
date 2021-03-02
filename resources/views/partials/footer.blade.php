@@ -5,7 +5,7 @@
       <p>{{$footers->subtitle}}</p>
       <div class="social-links">
         @foreach ($socials as $social)
-          <a href="{{$social->url}}" class=""><i class="{{$social->icon_footer}}"></i></a>
+          <a href="{{$social->url}}" class=""><i class="bx bxl-{{$social->icon}}"></i></a>
         @endforeach
       </div>
       <div class="copyright">

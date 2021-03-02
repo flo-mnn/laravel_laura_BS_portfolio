@@ -62,5 +62,13 @@ for (let i = 0; i < editBgBtn.length; i++) {
     });
 }
 
+// social delete one
+let socialSelect = document.querySelector('#edit-socials').querySelector('select');
+let deleteSocialForm = document.querySelector('#edit-socials').querySelector('.modal-footer').querySelector('form');
+
+socialSelect.addEventListener('change',function(){
+    console.log(socialSelect.value);
+    deleteSocialForm.action = `/bo/socials/delete/${socialSelect.value}`;
+});
 
 

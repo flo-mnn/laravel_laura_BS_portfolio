@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\NavbarController;
@@ -146,5 +147,8 @@ Route::post('/bo/about/arrow/update/{arrow}', [AboutController::class, 'updateAr
 Route::post('/bo/about/arrow/delete/{arrow}', [AboutController::class, 'destroyArrow']);
 // testimonials bo
 Route::post('/bo/testimonial/img/update', [TestimonialController::class, 'updateImg']);
+//socials
+Route::post('bo/socials/update',[ContactController::class, 'updateSocial']);
+Route::post('bo/socials/delete/{social}',[ContactController::class, 'destroySocial']);
 // footer
 Route::post('/bo/footers/img/update', [FooterController::class, 'updateImg']);

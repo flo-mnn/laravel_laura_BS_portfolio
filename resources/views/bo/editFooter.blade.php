@@ -1,12 +1,14 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" style="background-image: url('/storage/img/{{$page_images[3]->src}}');">
-    <div class="container">
+    <div class="container edit-parent">
+      <button type="button" data-toggle="modal" data-target="#edit-footer" class="edit btn btn-warning rounded-circle px-3 py-2"><i class="bx bx-edit"></i></button>
       <button type="button" data-toggle="modal" data-target="#edit-bg-img" class="edit-bg btn btn-info rounded-circle px-3 py-2 m-5 ml-auto" id="footers"><i class="bx bx-images"></i></button>
       <h3>{{$footers->title}}</h3>
       <p>{{$footers->subtitle}}</p>
-      <div class="social-links">
+      <div class="social-links edit-parent">
+        <button type="button" data-toggle="modal" data-target="#edit-socials" class="edit btn btn-warning rounded-circle px-3 py-2"><i class="bx bx-edit"></i></button>
         @foreach ($socials as $social)
-          <a href="{{$social->url}}" class=""><i class="{{$social->icon_footer}}"></i></a>
+          <a href="{{$social->url}}" class=""><i class="bx bxl-{{$social->icon}}"></i></a>
         @endforeach
       </div>
       <div class="copyright">

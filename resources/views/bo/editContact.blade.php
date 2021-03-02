@@ -13,12 +13,14 @@
         <div class="col-lg-6">
           <div class="row">
             <div class="col-md-12">
-              <div class="info-box">
+              <div class="info-box add-parent">
+                <button type="button" data-toggle="modal" data-target="#edit-about-arrow" class="add create-arrow btn btn-primary rounded-circle px-3 py-2"><i class="bx bx-list-plus"></i></button>
                 <i class="{{$contact_cards_heads[0]->icon}}"></i>
                 <h3>{{$contact_cards_heads[0]->title}}</h3>
-                <div class="social-links">
+                <div class="social-links edit-parent">
+                  <button type="button" data-toggle="modal" data-target="#edit-socials" class="edit btn btn-warning rounded-circle px-3 py-2"><i class="bx bx-edit"></i></button>
                   @foreach ($socials as $social)
-                    <a href="{{$social->url}}" class="twitter"><i class="{{$social->icon_contact}}"></i></a>  
+                    <a href="{{$social->url}}" class="twitter"><i class="icofont-{{$social->icon}}"></i></a>  
                   @endforeach
                 </div>
               </div>
