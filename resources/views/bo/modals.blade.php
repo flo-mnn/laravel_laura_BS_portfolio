@@ -197,3 +197,52 @@
             </div>
         </div> 
           <!-- Modal socials end-->
+           <!-- Modal footer general -->
+        <div class="modal fade" id="edit-footer" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="edit-footer">Change Social Media</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/bo/footer/update" method="POST" id="update-footer" >
+                    @csrf
+                    <div class="form-group">
+                      <label >Title</label>
+                      <input class="form-control" type="text" name="title" value="{{$footers->title}}">
+                    </div>
+                    <div class="form-group">
+                      <label >Subtitle</label>
+                      <textarea class="form-control" type="text" name="subtitle" >{{$footers->subtitle}}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <label >Copyright Text</label>
+                      <input class="form-control" type="text" name="copyright" value="{{$footers->copyright}}">
+                    </div>
+                    <div class="form-group">
+                      <label >Designed By text</label>
+                      <input class="form-control" type="text" name="designed" value="{{$footers->designed}}">
+                    </div>
+                    <div class="form-group">
+                      <label >Designer Name</label>
+                      <input class="form-control" type="text" name="link_name" value="{{$footers->link_name}}">
+                    </div>
+                    <div class="form-group">
+                      <label >Designer Link</label>
+                      <input class="form-control" type="text" name="link" value="{{$footers->link}}">
+                    </div>
+                    
+                      
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" class="btn btn-success" value="Update" form="update-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+        </div> 
+          <!-- Modal footer general end-->
