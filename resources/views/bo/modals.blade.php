@@ -183,7 +183,6 @@
                       <label >Please enter your social media new link</label>
                       <input class="form-control" type="text" name="url" value="">
                     </div>
-                      
                     </form>
                   </div>
                   <div class="modal-footer">
@@ -197,6 +196,39 @@
             </div>
         </div> 
           <!-- Modal socials end-->
+           <!-- Modal socials add-->
+        <div class="modal fade" id="add-socials" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="add-socials">Add Social Media</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/bo/socials/add" method="POST" id="add-social" >
+                    @csrf
+                    <div class="form-group">
+                      <label >Please enter the new icon name</label>
+                      <input class="form-control" type="text" name="icon" value="" placeholder="example: facebook" aria-describedby="iconHelp">
+                      <small id="iconHelp" class="form-text text-muted">Please go to <a href="https://boxicons.com/" target="_blank">BoxIcons</a> and filter "Logos" to find your new icon</small>
+                    </div>
+                    <div class="form-group">
+                      <label >Please enter your new social media link</label>
+                      <input class="form-control" type="text" name="url" value="">
+                    </div>
+                      
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" class="btn btn-success" value="Add" form="add-social">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+        </div> 
+          <!-- Modal socials add end-->
            <!-- Modal footer general -->
         <div class="modal fade" id="edit-footer" >
             <div class="modal-dialog">

@@ -156,6 +156,7 @@ Route::post('/bo/testimonial/img/update', [TestimonialController::class, 'update
 //socials
 Route::post('bo/socials/update',[ContactController::class, 'updateSocial']);
 Route::post('bo/socials/delete/{social}',[ContactController::class, 'destroySocial']);
+Route::post('/bo/socials/add',[ContactController::class, 'storeSocial']);
 // footer
 Route::post('/bo/footer/update', [FooterController::class, 'update']);
 Route::post('/bo/footers/img/update', [FooterController::class, 'updateImg']);

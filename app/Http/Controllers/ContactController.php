@@ -16,6 +16,17 @@ class ContactController extends Controller
         return redirect()->back();
     }
 
+
+    public function storeSocial(Request $request){
+        $new = new Social();
+        $new->icon = $request->icon;
+        $new->url = $request->url;
+        $new->save();
+
+        return redirect()->back();
+    }
+
+
     public function updateSocial(Request $request){
         $update = Social::find($request->id);
         if ($request->icon !=null) {

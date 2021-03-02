@@ -17,7 +17,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="info-box add-parent">
-                <button type="button" data-toggle="modal" data-target="#edit-about-arrow" class="add create-arrow btn btn-primary rounded-circle px-3 py-2"><i class="bx bx-list-plus"></i></button>
+                <button type="button" data-toggle="modal" data-target="#add-socials" class="add create-arrow btn btn-primary rounded-circle px-3 py-2"><i class="bx bx-list-plus"></i></button>
                 <i class="{{$contact_cards_heads[0]->icon}}"></i>
                 <h3>{{$contact_cards_heads[0]->title}}</h3>
                 <div class="social-links edit-parent">
