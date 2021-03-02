@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\TestimonialController;
 use App\Models\AboutArrow;
 use App\Models\AboutDigitalSkill;
 use App\Models\AboutNumber;
@@ -134,11 +136,15 @@ Route::get('bo/portfolio/edit/{id}', function($id){
 // navbar bo
 Route::post('/bo/navbar/update', [NavbarController::class, 'update']);
 // hero bo
-Route::post('/bo/hero/title/update', [HeroController::class, 'updateTitle']);
-Route::post('/bo/hero/img/update', [HeroController::class, 'updateImg']);
+Route::post('/bo/heroes/title/update', [HeroController::class, 'updateTitle']);
+Route::post('/bo/heroes/img/update', [HeroController::class, 'updateImg']);
 // about bo
 Route::post('/bo/about/title/update', [AboutController::class, 'updateTitle']);
 Route::post('/bo/about/img/update', [AboutController::class, 'updateImg']);
 Route::post('/bo/about/arrow/add', [AboutController::class, 'storeArrow']);
 Route::post('/bo/about/arrow/update/{arrow}', [AboutController::class, 'updateArrow']);
 Route::post('/bo/about/arrow/delete/{arrow}', [AboutController::class, 'destroyArrow']);
+// testimonials bo
+Route::post('/bo/testimonial/img/update', [TestimonialController::class, 'updateImg']);
+// footer
+Route::post('/bo/footers/img/update', [FooterController::class, 'updateImg']);

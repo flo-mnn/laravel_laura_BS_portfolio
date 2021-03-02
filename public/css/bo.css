@@ -89,7 +89,7 @@ button.add:hover{
 /* hero section */
 
 button.edit-bg{
-    z-index: 200;
+    z-index: 50;
     pointer-events: all;
 }
 
@@ -108,6 +108,15 @@ button.edit-bg{
     pointer-events: initial;
 }
 
+/* footer */
+footer .container {
+    position: relative !important;
+}
+footer .edit-bg {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
 
 
 

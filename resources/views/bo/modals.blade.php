@@ -1,29 +1,29 @@
 {{-- MODALS --}}
-        <!-- Modal edit hero img-->
-        <div class="modal fade" id="edit-hero-img" >
+        <!-- Modal edit bg img-->
+        <div class="modal fade" id="edit-bg-img" >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="edit-navbar">Change Background Image</h5>
+                  <h5 class="modal-title" id="edit-bg-img">Change Background Image</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form action="/bo/hero/img/update" method="POST" id="update-hero-img" enctype="multipart/form-data">
+                  <form action="/bo/hero/img/update" method="POST" id="update-bg-img" enctype="multipart/form-data">
                     @csrf
-                      <input type="file" name="src" value={{$page_images[0]->src}}>
+                      <input type="file" name="src">
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" value="Update" form="update-hero-img">
+                    <input type="submit" class="btn btn-success" value="Update" form="update-bg-img">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   
                 </div>
               </div>
             </div>
         </div>
-          <!-- Modal edit hero img-->
+          <!-- Modal edit bg img-->
         <!-- Modal edit navbar-->
         <div class="modal fade" id="edit-navbar" >
             <div class="modal-dialog">

@@ -52,5 +52,15 @@ createArrowBtn.addEventListener('click',function(){
 
 });
 
+//CHANGE edit BG img form 
+let bgImgForm = document.querySelector('#update-bg-img');
+let editBgBtn = document.querySelectorAll('.edit-bg');
+
+for (let i = 0; i < editBgBtn.length; i++) {
+    editBgBtn[i].addEventListener('click',function(){
+        bgImgForm.action = `/bo/${editBgBtn[i].getAttribute('id')}/img/update`;
+    });
+}
+
 
 

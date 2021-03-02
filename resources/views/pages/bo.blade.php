@@ -3,12 +3,12 @@
     @include('bo.editHero')
     <main id="main">
         @include('bo.editAbout')
-        @include('partials.resume')
-        @include('partials.services')
-        @include('partials.testimonials')
-        @include('partials.portfolio')
-        @include('partials.pricing')
-        @include('partials.contact')
+        @include('bo.editResume')
+        @include('bo.editServices')
+        @include('bo.editTestimonials')
+        @include('bo.editPortfolio')
+        @include('bo.editPricing')
+        @include('bo.editContact')
         @include('bo.modals')
 
     </main>
