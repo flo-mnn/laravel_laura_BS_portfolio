@@ -29,8 +29,8 @@ for (let i = 0; i < allAboutArrows.length; i++) {
 
 for (let i = 0; i < allAboutArrowsBtn.length; i++) {
     allAboutArrowsBtn[i].addEventListener('click',function(e){
-        footerUpdate.classList.toggle('d-none');
-        footerCreate.classList.toggle('d-none');
+        footerUpdate.classList.remove('d-none');
+        footerCreate.classList.add('d-none');
         let id = allAboutArrowsBtn[i].getAttribute('id');
         arrowsForm.action = `/bo/about/arrow/update/${id}`;
         arrowsDelete.action = `/bo/about/arrow/delete/${id}`
@@ -45,11 +45,9 @@ for (let i = 0; i < allAboutArrowsBtn.length; i++) {
 //Create
 let createArrowBtn = document.querySelector('.create-arrow');
 createArrowBtn.addEventListener('click',function(){
-    footerUpdate.classList.toggle('d-none');
-    footerCreate.classList.toggle('d-none');
+    footerCreate.classList.remove('d-none');
+    footerUpdate.classList.add('d-none');
     arrowsForm.action = `/bo/about/arrow/add`;
-
-
 });
 
 //CHANGE edit BG img form 
@@ -105,34 +103,60 @@ for (let i = 0; i < editBtn.length; i++) {
     editBtn[i].addEventListener('click',function(){
         for (let i = 0; i < allMultipleFooterUpdate.length; i++) {
             const element = allMultipleFooterUpdate[i];
-            element.classList.toggle('d-none')
+            element.classList.remove('d-none')
         }
         for (let i = 0; i < allMultipleFooterCreate.length; i++) {
             const element = allMultipleFooterCreate[i];
-            element.classList.toggle('d-none')
+            element.classList.add('d-none')
         };
     });
     
 }
+
+// multiple forms
+let createEducationBtn = document.querySelector('.create-education');
+let editEducationForm = document.querySelector('#edit-education').querySelector('form');
+
+
 for (let i = 0; i < addBtns.length; i++) {
     addBtns[i].addEventListener('click',function(){
         for (let i = 0; i < allMultipleFooterUpdate.length; i++) {
             const element = allMultipleFooterUpdate[i];
-            element.classList.toggle('d-none');
+            element.classList.add('d-none');
         }
         for (let i = 0; i < allMultipleFooterCreate.length; i++) {
             const element = allMultipleFooterCreate[i];
-            element.classList.toggle('d-none')
+            element.classList.remove('d-none')
         }
-        editEducationForm.action = `/bo/education/add`;
+        editEducationForm.action = `/bo/resume/education/add`;
+        // add other multiple form add paths here
         //attention, get it back with editing see below
     });   
 }
 
 // education
+let editEducationBtns = document.querySelectorAll('.edit-education-btn')
 // when editing, turn form action back
-// let id = allAboutArrowsBtn[i].getAttribute('id');
-//         arrowsForm.action = `/bo/about/arrow/update/${id}`;
-//Create
-let createEducationBtn = document.querySelector('.create-education');
-let editEducationForm = document.querySelector('#edit-education').querySelector('form');
+for (let i = 0; i < editEducationBtns.length; i++) {
+    const element = editEducationBtns[i];
+    element.addEventListener('click',function(){
+        let id = editEducationBtns[i].getAttribute('id');
+        editEducationForm.action = `/bo/resume/education/update/${id}`;
+        let inputs = [editEducationForm.querySelector("input[name=title]"),editEducationForm.querySelector("input[name=start_date]"),editEducationForm.querySelector("input[name=end_date]"),editEducationForm.querySelector("input[name=place]"),editEducationForm.querySelector("textarea[name=text]")];
+        let educationItems = document.querySelectorAll('.education-item');
+        let deleteEducationForm = document.querySelector('#edit-education').querySelector('.footer-update').querySelector('form');
+        console.log(deleteEducationForm);
+        deleteEducationForm.action = `/bo/resume/education/delete/${id}`;
+        let values = [educationItems[i].querySelector('h4'),educationItems[i].querySelector('.start'),educationItems[i].querySelector('.end'),educationItems[i].querySelector('em'),educationItems[i].querySelector('.ed-text')];
+        for (let i = 0; i < inputs.length; i++) {
+            const element = inputs[i];
+            element.value = values[i].textContent;
+            if (i==2 && element.value == ' Present') {
+                element.value = null;
+            }
+        }
+    })
+    
+}
+
+

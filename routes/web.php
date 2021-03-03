@@ -149,7 +149,10 @@ Route::post('/bo/about/arrow/update/{arrow}', [AboutController::class, 'updateAr
 Route::post('/bo/about/arrow/delete/{arrow}', [AboutController::class, 'destroyArrow']);
 // resume
 Route::post('/bo/resumes/title/update', [ResumeController::class, 'updateTitle']);
+Route::post('/bo/resume/education/update/{education}', [ResumeController::class, 'updateEducation']);
 Route::post('/bo/summary/update', [ResumeController::class, 'updateSummary']);
+Route::post('/bo/resume/education/add', [ResumeController::class, 'storeEducation']);
+Route::post('/bo/resume/education/delete/{education}', [ResumeController::class, 'destroyEducation']);
 
 
 // section titles
